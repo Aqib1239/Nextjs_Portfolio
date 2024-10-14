@@ -46,7 +46,7 @@ const infoData = [
   //   },
   {
     icon: <FaGraduationCap size={20} />,
-    text: "Bachelor of Technology in Computer Science and Engineering",
+    text: "Bachelor of Technology in Computer Science and Engg",
   },
   {
     icon: <LucideHome size={20} />,
