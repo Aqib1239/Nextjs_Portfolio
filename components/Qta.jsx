@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 
 const Qta = () => {
   return (
-    <section className="py-24 xl:mt-24 bg-[#F5F5F5] dark:bg-secondary/40">
+    <section className="pt-10 pb-20 xl:mt-24 relative">
+      {/* Gradient border with opacity fade from sides */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300/80 to-transparent dark:via-gray-700/80"></div>
       <div className="container mx-auto ">
         <div className="flex flex-col items-center">
           <motion.h2
@@ -35,11 +37,14 @@ const Qta = () => {
           >
             <Link href="/contact">
               <Button className="tracking-wider gap-x-3">
-                Contact me <motion.span 
-                 initial={{ opacity: 0, y: -100 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 1, delay: 0.7 }}
-                ><Send size={16} /></motion.span>{" "}
+                Contact me{" "}
+                <motion.span
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.7 }}
+                >
+                  <Send size={16} />
+                </motion.span>{" "}
               </Button>
             </Link>
           </motion.div>

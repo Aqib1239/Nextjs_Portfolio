@@ -1,8 +1,8 @@
-'use client';
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 // import DevImg from "../components/DevImg";
-import myPic from "../../public/about/profile33333333.png"
+import myPic from "../../public/about/profile33333333.png";
 import Image from "next/image";
 import {
   Tabs,
@@ -17,15 +17,25 @@ import { Briefcase, LucideHome, LucidePhoneCall } from "lucide-react";
 import { MdOutlineEmail } from "react-icons/md";
 import { SlCalender } from "react-icons/sl";
 import { FaGraduationCap, FaHtml5 } from "react-icons/fa6";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const iconVariants = (duration) => ({
-  initial: {y: -15},
+  initial: { y: -15 },
   animate: {
     y: [10, -10],
-    transition: {duration: duration, repeat: Infinity, ease: "linear", repeatType: "reverse"},
-  }
-})
+    transition: {
+      duration: duration,
+      repeat: Infinity,
+      ease: "linear",
+      repeatType: "reverse",
+    },
+  },
+});
 
 const infoData = [
   {
@@ -74,10 +84,22 @@ const qualificationData = [
     title: "experience",
     data: [
       {
-        fresher: "This section is for future use",
-        company: "ABC Software (India)",
-        role: "Full Stack Web Developer",
-        years: "2020 - 2024",
+        fresher: "MERN Stack Developer",
+        company: "Yatiken Software Solutions (India)",
+        role: "MERN Stack Developer",
+        years: " Feb 2024 - Present ",
+      },
+      {
+        fresher: "Web Developer Intern",
+        company: "Yatiken Software Solutions (India)",
+        role: "Web Developer",
+        years: "Jan 2024 - Feb 2024",
+      },
+      {
+        fresher: "MERN Stack Developer Trainee",
+        company: "QSpiders (Noida, India)",
+        role: "MERN Stack Developer",
+        years: "Jul 2024 - Dec 2024",
       },
     ],
   },
@@ -89,7 +111,8 @@ const skillData = [
     data: [
       {
         htmlCss: "HTML, CSS",
-        JS: "JavaScript, React.js",
+        JS: "JavaScript",
+        react: "React.js/Next.js",
         node: "Node.js",
         express: "Express.js",
         dataBase: "MongoDB",
@@ -124,14 +147,23 @@ const skillData = [
   },
 ];
 
-const About = () => {
+const Page = () => {
+  const [showMore, setShowMore] = useState(false);
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
 
+  const handleReadMore = () => {
+    setShowMore(true);
+  };
+
+  const handleShowLess = () => {
+    setShowMore(false);
+  };
+
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24 mb-12">
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-4 md:mt-0">
         <motion.h2
           whileInView={{ opacity: 1, y: 0, x: 0 }}
           initial={{ opacity: 0, y: -100, x: 50 }}
@@ -143,20 +175,23 @@ const About = () => {
 
         <div className="flex flex-col xl:flex-row">
           {/* Developer Image */}
-          <div className="flex flex-1 mb-12 xl:mb-0">
+          <div className="flex justify-center items-center flex-1 mb-12 xl:mb-0">
+            {/* Developer Image */}
             <motion.div
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="w-full h-[505px] xl:w-[505px] xl:h-[505px]  lg:w-[450px] lg:h-[450px] md:w-[350px] md:h-[350px] sm:w-[280px] sm:h-[280px] bg-about_shape_light dark:bg-about_shape_dark bg-no-repeat bg-cover relative mx-auto xl:mx-0"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6 }}
+              className="flex-1 flex justify-center"
             >
-              <Image
-                src={myPic}
-                layout="fill"
-                objectFit="cover"
-                alt="Developer Image"
-                className="pb-[.6rem] pl-[2.5rem] overflow-hidden"
-              />
+              <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px]  bg-[#FE705A] dark:bg-[#32334C] rounded-full overflow-hidden">
+                <Image
+                  src={myPic}
+                  fill
+                  alt="Developer Image"
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
           </div>
 
@@ -203,16 +238,48 @@ const About = () => {
                       MERN Stack Developer
                     </motion.h3>
                     <motion.p
-                      whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: 100 }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
                       className="subtitle max-w-xl mx-auto xl:mx-0 tracking-wider"
                     >
-                      Hello, I'm Mohammad Aqib, an aspiring Mern Stack Developer
-                      with a strong desire to create visually appealing and
-                      user-friendly websites. I may be new to the profession,
-                      but I bring a fresh perspective and an insatiable goal to
-                      grow and achieve in the domain of web development.
+                      Hello, I'm Mohammad Aqib, a dedicated MERN Stack Developer
+                      with 1 year of professional experience in building
+                      responsive, scalable, and user-friendly web applications.
+                      I specialize in React.js, Next.js, Node.js, Express, and
+                      MongoDB, and have worked on both office projects and
+                      personal projects that showcase my ability to deliver
+                      clean, efficient, and modern solutions. With a strong
+                      focus on frontend development and seamless user
+                      experiences.{" "}
+                      {!showMore ? (
+                        <span
+                          onClick={handleReadMore}
+                          className="text-primary cursor-pointer underline hover:opacity-80 transition"
+                        >
+                          Read More
+                        </span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.6 }}
+                          className="block mt-2"
+                        >
+                          I bring a problem-solving mindset, adaptability, and
+                          continuous learning attitude to every project. My goal
+                          is to craft impactful digital products while growing
+                          as a professional in the world of full-stack web
+                          development.{" "}
+                          <span
+                            onClick={handleShowLess}
+                            className="text-primary cursor-pointer underline hover:opacity-80 transition"
+                          >
+                            Show Less
+                          </span>
+                        </motion.span>
+                      )}
                     </motion.p>
 
                     {/* Icons */}
@@ -244,6 +311,7 @@ const About = () => {
                       transition={{ duration: 0.5, delay: 0 }}
                       className="h3 mb-8 text-center xl:text-left tracking-widest font-medium"
                     >
+                      {" "}
                       My Awesome Journey
                     </motion.h3>
 
@@ -259,7 +327,8 @@ const About = () => {
                         >
                           <FaGraduationCap size={28} />
                           <h4 className="capitalize font-medium tracking-[2px]">
-                            {getData(qualificationData, "education").title}
+                            {" "}
+                            {getData(qualificationData, "education").title}{" "}
                           </h4>
                         </motion.div>
                         {/* List */}
@@ -276,15 +345,17 @@ const About = () => {
                                 <div className="flex gap-x-8 group" key={index}>
                                   <div className="h-[138px] w-[3px] bg-border relative ml-2 tracking-wider">
                                     <div className="w-[11px] h-[11px] bg-primary absolute -left-[5px] rounded-full group-hover:translate-y-[136px] transition-all duration-500"></div>
-
                                     <div className="ml-4 w-[200px] font-medium text-[18px] mb-4 text-muted-foreground leading-none ">
-                                      {university}
+                                      {" "}
+                                      {university}{" "}
                                     </div>
                                     <div className="ml-4 mb-4 w-[200px] text-[16.5px] font-light text-muted-foreground leading-6">
-                                      {qualification}
+                                      {" "}
+                                      {qualification}{" "}
                                     </div>
                                     <div className="ml-4 w-[200px] text-base font-medium leading-6">
-                                      {years}
+                                      {" "}
+                                      {years}{" "}
                                     </div>
                                   </div>
                                 </div>
@@ -293,7 +364,6 @@ const About = () => {
                           )}
                         </motion.div>
                       </div>
-
                       {/* Experience */}
                       <div className="flex flex-col gap-y-3">
                         <motion.div
@@ -304,7 +374,10 @@ const About = () => {
                         >
                           <Briefcase size={28} />
                           <h4 className="capitalize tracking-[2px] font-medium">
-                            {getData(qualificationData, "experience").title}
+                            {" "}
+                            {
+                              getData(qualificationData, "experience").title
+                            }{" "}
                           </h4>
                         </motion.div>
                         {/* List */}
@@ -323,20 +396,23 @@ const About = () => {
                                   className="mt-3 flex gap-x-8 group"
                                   key={index}
                                 >
-                                  <div className="h-[90px] w-[3px] bg-border relative ml-2 tracking-wider">
-                                    <div className="w-[11px] h-[11px] bg-primary absolute -left-[5px] rounded-full group-hover:translate-y-[90px] transition-all duration-500"></div>
-
+                                  <div className="h-[130px] w-[3px] bg-border relative ml-2 tracking-wider">
+                                    <div className="w-[11px] h-[11px] bg-primary absolute -left-[5px] rounded-full group-hover:translate-y-[120px] transition-all duration-500"></div>
                                     <div className="ml-4 w-[200px] font-medium text-[18px] leading-none text-muted-foreground mb-4">
-                                      {fresher}
+                                      {" "}
+                                      {fresher}{" "}
                                     </div>
                                     <div className="ml-4 w-[200px] text-[16.5px] font-light leading-none mb-4 text-muted-foreground">
-                                      {company}
+                                      {" "}
+                                      {company}{" "}
                                     </div>
                                     <div className="ml-4 mb-4 w-[200px] text-[16.5px] leading-none font-light text-muted-foreground">
-                                      {qualification}
+                                      {" "}
+                                      {qualification}{" "}
                                     </div>
                                     <div className="ml-4 w-[200px] text-base font-medium">
-                                      {years}
+                                      {" "}
+                                      {years}{" "}
                                     </div>
                                   </div>
                                 </div>
@@ -358,9 +434,9 @@ const About = () => {
                       transition={{ duration: 0.5, delay: 0 }}
                       className="h3 mb-8 text-center xl:text-left tracking-widest font-medium"
                     >
-                      My Technical Proficiency
+                      {" "}
+                      My Technical Proficiency{" "}
                     </motion.h3>
-
                     {/* Skills */}
                     <div>
                       <motion.div
@@ -371,7 +447,8 @@ const About = () => {
                       >
                         <FaGraduationCap />
                         <h4 className="capitalize font-medium tracking-[2.5px]">
-                          {getData(skillData, "skills").title}
+                          {" "}
+                          {getData(skillData, "skills").title}{" "}
                         </h4>
                       </motion.div>
                       <div className="border-b border-[1px] mb-4"></div>
@@ -386,6 +463,7 @@ const About = () => {
                             const {
                               htmlCss,
                               JS,
+                              react,
                               dataBase,
                               node,
                               express,
@@ -395,24 +473,32 @@ const About = () => {
                                 className="w-[220px] h-[220px] text-center xl:text-left mx-auto xl:mx-0 group"
                                 key={index}
                               >
-                                <div className="h-full w-full flex flex-col  justify-center">
-                                  <div className="h-[145px] w-[3px] bg-border relative ml-2">
-                                    <div className="w-[11px] h-[11px] bg-primary absolute -left-[5px] rounded-full group-hover:translate-y-[143px] transition-all duration-500"></div>
-
+                                <div className="h-full w-full flex flex-col justify-center">
+                                  <div className="h-[200px] w-[3px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] bg-primary absolute -left-[5px] rounded-full group-hover:translate-y-[195px] transition-all duration-500"></div>
                                     <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
-                                      {htmlCss}
+                                      {" "}
+                                      {htmlCss}{" "}
                                     </div>
                                     <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
-                                      {JS}
+                                      {" "}
+                                      {JS}{" "}
                                     </div>
                                     <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
-                                      {node}
+                                      {" "}
+                                      {react}{" "}
                                     </div>
                                     <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
-                                      {express}
+                                      {" "}
+                                      {node}{" "}
                                     </div>
                                     <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
-                                      {dataBase}
+                                      {" "}
+                                      {express}{" "}
+                                    </div>
+                                    <div className="ml-4 text-lg w-[200px] font-normal text-muted-foreground pb-2">
+                                      {" "}
+                                      {dataBase}{" "}
                                     </div>
                                   </div>
                                 </div>
@@ -422,7 +508,6 @@ const About = () => {
                         )}
                       </motion.div>
                     </div>
-
                     {/* Tools */}
                     <div className="mt-10">
                       <motion.div
@@ -433,7 +518,8 @@ const About = () => {
                       >
                         <FaGraduationCap />
                         <h4 className="text-xl font-semibold xl:text-left capitalize tracking-[2.5px]">
-                          {getData(skillData, "tools").title}
+                          {" "}
+                          {getData(skillData, "tools").title}{" "}
                         </h4>
                       </motion.div>
                       <div className="border-b border-[1px] mb-4"></div>
@@ -444,7 +530,8 @@ const About = () => {
                         className="flex gap-x-8 sm:gap-x-2 py-2 justify-center xl:justify-start"
                       >
                         {getData(skillData, "tools").data.map((item, index) => {
-                          const { imgPath, duration } = item; // extract duration for each tool
+                          const { imgPath, duration } = item;
+                          // extract duration for each tool
                           return (
                             <motion.div
                               variants={iconVariants(duration)} // pass unique duration here
@@ -471,6 +558,7 @@ const About = () => {
                                     />
                                   </TooltipTrigger>
                                   <TooltipContent className="mb-2 bg-popover text-center bg-black dark:bg-white/80 text-primary font-medium text-[1rem] px-auto">
+                                    {" "}
                                     <p>{item.tooltip}</p>
                                   </TooltipContent>
                                 </Tooltip>
@@ -491,4 +579,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Page;

@@ -1,18 +1,19 @@
 import Hero from "@/components/Hero";
-import Image from "next/image";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import Contacts from "@/components/Contacts";
 import Qta from "@/components/Qta";
+import Testimonials from "@/components/Testimonials";
 
-export default function Home() {
+const page = () => {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <About />
       <Projects />
+      <Testimonials />
       <Qta />
-      {/* <Contacts /> */}
     </main>
   );
 }
+
+export default page;

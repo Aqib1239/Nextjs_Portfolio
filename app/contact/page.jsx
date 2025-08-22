@@ -4,7 +4,7 @@ import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 import Form from "@/components/Form";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const Page = () => {
   return (
     <section>
       <div className="container mx-auto">
@@ -108,4 +108,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Page;
