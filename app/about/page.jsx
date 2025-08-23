@@ -162,11 +162,11 @@ const Page = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24 mb-12">
+    <section className="xl:h-[860px] pb-12 xl:py-24 mb-12 overflow-hidden">
       <div className="container mx-auto mt-4 md:mt-0">
         <motion.h2
           whileInView={{ opacity: 1, y: 0, x: 0 }}
-          initial={{ opacity: 0, y: -100, x: 50 }}
+          initial={{ opacity: 0, y: -10, x: 50 }}
           transition={{ duration: 0.5 }}
           className="section-title mb-8 xl:mb-16 text-center mx-auto"
         >
@@ -198,7 +198,7 @@ const Page = () => {
           {/* Tabs */}
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.5, delay: 0 }}
             className="flex-1"
           >
@@ -231,18 +231,18 @@ const Page = () => {
                   <div className="text-center xl:text-left">
                     <motion.h3
                       whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: 100 }}
+                      initial={{ opacity: 0, x: 20 }}
                       transition={{ duration: 0.5, delay: 0.25 }}
                       className="h3 mb-4 tracking-widest font-medium"
                     >
                       MERN Stack Developer
                     </motion.h3>
                     <motion.p
-                      initial={{ opacity: 0, y: 30 }}
+                      initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.2 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="subtitle max-w-xl mx-auto xl:mx-0 tracking-wider"
+                      className="subtitle max-w-xl mx-auto xl:mx-0 tracking-wider "
                     >
                       Hello, I'm Mohammad Aqib, a dedicated MERN Stack Developer
                       with 1 year of professional experience in building
@@ -285,17 +285,19 @@ const Page = () => {
                     {/* Icons */}
                     <motion.div
                       whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: 100 }}
+                      initial={{ opacity: 0, x: -10 }}
                       transition={{ duration: 0.5, delay: 0.85 }}
                       className="grid xl:grid-cols-2 gap-4 mb-12"
                     >
                       {infoData.map((item, index) => (
                         <div
-                          className="flex items-center w-[350px] gap-x-4 mx-auto xl:mx-0 tracking-wider"
+                          className="flex items-center gap-x-4 mx-auto xl:mx-0 tracking-wider"
                           key={index}
                         >
                           <div className="text-primary">{item.icon}</div>
-                          <div className="text-left">{item.text}</div>
+                          <div className="text-left text-[15px] md:text-lg">
+                            {item.text}
+                          </div>
                         </div>
                       ))}
                     </motion.div>
@@ -307,7 +309,7 @@ const Page = () => {
                   <div>
                     <motion.h3
                       whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: 100 }}
+                      initial={{ opacity: 0, x: 20 }}
                       transition={{ duration: 0.5, delay: 0 }}
                       className="h3 mb-8 text-center xl:text-left tracking-widest font-medium"
                     >
@@ -321,7 +323,7 @@ const Page = () => {
                       <div className="flex flex-col gap-y-6 mb-6">
                         <motion.div
                           whileInView={{ opacity: 1, x: 0 }}
-                          initial={{ opacity: 0, x: 100 }}
+                          initial={{ opacity: 0, x: 20 }}
                           transition={{ duration: 0.5, delay: 0.2 }}
                           className="flex gap-x-4 items-center text-[22px] text-primary"
                         >
@@ -334,7 +336,7 @@ const Page = () => {
                         {/* List */}
                         <motion.div
                           whileInView={{ opacity: 1, x: 0 }}
-                          initial={{ opacity: 0, x: 100 }}
+                          initial={{ opacity: 0, x: 20 }}
                           transition={{ duration: 0.5, delay: 0.45 }}
                           className="flex flex-col gap-y-8"
                         >
@@ -368,7 +370,7 @@ const Page = () => {
                       <div className="flex flex-col gap-y-3">
                         <motion.div
                           whileInView={{ opacity: 1, x: 0 }}
-                          initial={{ opacity: 0, x: 100 }}
+                          initial={{ opacity: 0, x: 20 }}
                           transition={{ duration: 0.5, delay: 0.6 }}
                           className="flex gap-x-4 items-center text-[22px] text-primary"
                         >
@@ -383,7 +385,7 @@ const Page = () => {
                         {/* List */}
                         <motion.div
                           whileInView={{ opacity: 1, x: 0 }}
-                          initial={{ opacity: 0, x: 100 }}
+                          initial={{ opacity: 0, x: 20 }}
                           transition={{ duration: 0.5, delay: 0.8 }}
                           className="flex flex-col gap-y-8"
                         >
@@ -430,7 +432,7 @@ const Page = () => {
                   <div className="text-center xl:text-left">
                     <motion.h3
                       whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: 100 }}
+                      initial={{ opacity: 0, x: 20 }}
                       transition={{ duration: 0.5, delay: 0 }}
                       className="h3 mb-8 text-center xl:text-left tracking-widest font-medium"
                     >
@@ -441,7 +443,7 @@ const Page = () => {
                     <div>
                       <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: 100 }}
+                        initial={{ opacity: 0, x: 20 }}
                         transition={{ duration: 0.5, delay: 0.25 }}
                         className="flex gap-x-4 mb-4 items-center text-[22px] text-primary"
                       >
@@ -454,7 +456,7 @@ const Page = () => {
                       <div className="border-b border-[1px] mb-4"></div>
                       <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: 100 }}
+                        initial={{ opacity: 0, x: 20 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
                         className="flex flex-wrap gap-8 justify-center xl:justify-start"
                       >
@@ -512,7 +514,7 @@ const Page = () => {
                     <div className="mt-10">
                       <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: 100 }}
+                        initial={{ opacity: 0, x: 20 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                         className="flex gap-x-4 mb-4 items-center text-[22px] text-primary"
                       >
@@ -525,7 +527,7 @@ const Page = () => {
                       <div className="border-b border-[1px] mb-4"></div>
                       <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: -100 }}
+                        initial={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.5, delay: 1.0 }}
                         className="flex gap-x-8 sm:gap-x-2 py-2 justify-center xl:justify-start"
                       >

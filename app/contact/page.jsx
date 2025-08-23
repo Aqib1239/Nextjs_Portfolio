@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Page = () => {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-hidden">
         {/* Text and Illustration */}
         <div className="grid xl:grid-cols-2 gap-28 items-center place-items-center text-center xl:text-left">
           {/* Text */}
@@ -23,17 +23,17 @@ const Page = () => {
               <span className="text-4xl">👋</span>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.10 }}
               className="text-3xl xl:text-4xl font-bold mb-6 max-w-md mx-auto xl:mx-0"
             >
               Let's get in touch.
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.75 }}
+              transition={{ duration: 1, delay: 0.25 }}
               className="text-lg xl:text-xl max-w-md mx-auto xl:mx-0"
             >
               I’m excited to connect with you! Whether you have a question, a
@@ -44,9 +44,9 @@ const Page = () => {
 
           {/* Illustration */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.40 }}
             className="md:order-1 sm:order-1 xl:order-2 xl:w-[500px] xl:h-[500px] lg:w-[450px] lg:h-[450px] md:w-[400px] md:h-[400px] sm:w-[300px] sm:h-[300px] bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-center bg-no-repeat"
           ></motion.div>
         </div>
@@ -57,9 +57,9 @@ const Page = () => {
           <div className="flex flex-col xl:items-start md:items-center gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg">
             {/* mail */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 1.25 }}
+              transition={{ duration: 1, delay: 0.55 }}
               className="flex  gap-x-8 lg:mt-12 md:mt-12 sm:mt-12"
             >
               <MailIcon size={20} className="text-primary" />
@@ -70,9 +70,9 @@ const Page = () => {
 
             {/* address */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 1.5 }}
+              transition={{ duration: 1, delay: 0.70 }}
               className="flex items-center gap-x-8"
             >
               <HomeIcon size={20} className="text-primary" />
@@ -84,9 +84,9 @@ const Page = () => {
 
             {/* phone */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 1.75 }}
+              transition={{ duration: 1, delay: 0.85 }}
               className="flex items-center gap-x-8"
             >
               <PhoneCall size={20} className="text-primary" />
@@ -95,9 +95,9 @@ const Page = () => {
           </div>
 
           <motion.div
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 2 }}
+          transition={{ duration: 1, delay: 1 }}
           >
             {/* form */}
             <Form />

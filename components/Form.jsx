@@ -81,9 +81,9 @@ const Form = () => {
         <MessageSquare size={20} className="absolute top-4 right-6" />
       </div>
       <motion.div 
-      initial={{ opacity: 0, y: 170 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 1.5 }}
+      transition={{ duration: 1, delay: 0.10 }}
       >
         <Button className="flex items-center gap-x-2 max-w-[166px]">
           Let's Talk <ArrowRightIcon size={20} />{" "}

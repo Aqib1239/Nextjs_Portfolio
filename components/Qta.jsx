@@ -13,7 +13,7 @@ const Qta = () => {
       <div className="container mx-auto ">
         <div className="flex flex-col items-center">
           <motion.h2
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0 }}
             className="h2 max-w-xl text-center mb-8"
@@ -22,7 +22,7 @@ const Qta = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             className="max-w-xl text-center mb-8"
@@ -31,7 +31,7 @@ const Qta = () => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.65 }}
           >
@@ -39,7 +39,7 @@ const Qta = () => {
               <Button className="tracking-wider gap-x-3">
                 Contact me{" "}
                 <motion.span
-                  initial={{ opacity: 0, y: -100 }}
+                  initial={{ opacity: 0, y: -40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.7 }}
                 >

@@ -16,18 +16,47 @@ import "../app/swiper-custom.css";
 const projectData = [
   {
     id: 1,
-    image: "/work/calculator1.png",
-    category: "Frontend",
-    name: "Dynamic Calculator",
+    image: "/work/quick-talk.png",
+    category: "Full Stack",
+    name: "Quick Talk - Live Chat Application",
     description:
-      "I've developed a calculator using HTML, CSS, and JavaScript, featuring a toggle switch for switching between dark and light modes.",
-    link: "https://calculatordark.netlify.app/",
-    github: "",
+      "I've built a responsive Live Chat Application using MERN Stack and Socket.io, enabling real-time communication between users, offering a seamless experience for online conversations.",
+    link: "https://quicktalk-application.onrender.com/",
+    github: "https://github.com/Aqib1239/chat-application",
     priority: true,
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Socket.io",
+    ],
   },
   {
     id: 2,
+    image: "/work/mern-blog.png",
+    category: "Full Stack",
+    name: "MERN Blog Application",
+    description:
+      "I've built a responsive Blog Application using MERN Stack, enabling users to create, read, update, and delete blog posts, offering a dynamic and user-friendly experience for blogging.",
+    link: "https://mern-blog-app-olive.vercel.app/",
+    github: "https://github.com/Aqib1239/mern-blog-app",
+    priority: true,
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ],
+  },
+  {
+    id: 3,
     image: "/work/ecommerce1.png",
     category: "Frontend",
     name: "Cara Ecommerce",
@@ -39,7 +68,7 @@ const projectData = [
     techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 3,
+    id: 4,
     image: "/work/passwordGen.png",
     category: "Frontend",
     name: "Password Generator",
@@ -49,18 +78,6 @@ const projectData = [
     github: "https://github.com/Aqib1239/PasswordGenerator",
     priority: false,
     techStack: ["HTML", "CSS", "JavaScript", "ReactJS"],
-  },
-  {
-    id: 4,
-    image: "/work/news-app.png",
-    category: "Frontend",
-    name: "News Application",
-    description:
-      "I've developed a responsive News Application using HTML, CSS, JavaScript, and ReactJS.",
-    link: "",
-    github: "",
-    priority: false,
-    techStack: ["HTML", "CSS", "JavaScript", "ReactJS", "API"],
   },
   {
     id: 5,
@@ -85,30 +102,6 @@ const projectData = [
     github: "https://github.com/Aqib1239/TicTacToe_game",
     priority: false,
     techStack: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 7,
-    image: "",
-    category: "Backend",
-    name: "Backend Project Not Found",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum consectetur obcaecati!",
-    link: "",
-    github: "",
-    priority: false,
-    techStack: [],
-  },
-  {
-    id: 8,
-    image: "",
-    category: "Full Stack",
-    name: "Full Stack Project Not Found",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum consectetur obcaecati!",
-    link: "",
-    github: "",
-    priority: false,
-    techStack: [],
   },
 ];
 

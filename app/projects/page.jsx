@@ -6,79 +6,93 @@ import { motion } from "framer-motion";
 
 const projectData = [
   {
-    image: "/work/calculator1.png",
-    category: "Frontend",
-    name: "Dynamic Calculator",
+    id: 1,
+    image: "/work/quick-talk.png",
+    category: "Full Stack",
+    name: "Quick Talk - Live Chat Application",
     description:
-      "I've developed a calculator using HTML, CSS, and JavaScript, featuring a toggle switch for switching between dark and light modes. This dynamic project allows users to perform calculations seamlessly while providing the option to switch between two different visual themes for optimal viewing comfort.",
-    link: "https://calculatordark.netlify.app/",
-    github: "",
+      "I've built a responsive Live Chat Application using MERN Stack and Socket.io, enabling real-time communication between users, offering a seamless experience for online conversations.",
+    link: "https://quicktalk-application.onrender.com/",
+    github: "https://github.com/Aqib1239/chat-application",
     priority: true,
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Socket.io",
+    ],
   },
   {
+    id: 2,
+    image: "/work/mern-blog.png",
+    category: "Full Stack",
+    name: "MERN Blog Application",
+    description:
+      "I've built a responsive Blog Application using MERN Stack, enabling users to create, read, update, and delete blog posts, offering a dynamic and user-friendly experience for blogging.",
+    link: "https://mern-blog-app-olive.vercel.app/",
+    github: "https://github.com/Aqib1239/mern-blog-app",
+    priority: true,
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ],
+  },
+  {
+    id: 3,
     image: "/work/ecommerce1.png",
     category: "Frontend",
     name: "Cara Ecommerce",
     description:
-      "I've developed a responsive ecommerce website using HTML, CSS, and JavaScript. The site offers a seamless shopping experience, allowing users to browse products effortlessly on any device. With intuitive design and smooth functionality, it ensures a user-friendly interface.",
+      "I've developed a responsive ecommerce website using HTML, CSS, and JavaScript.",
     link: "https://simple-deploy-ecommerce-website.netlify.app/",
     github: "https://github.com/Aqib1239/Ecommerce-website",
     priority: true,
     techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
+    id: 4,
     image: "/work/passwordGen.png",
     category: "Frontend",
     name: "Password Generator",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum consectetur obcaecati! Asperiores, id odit.",
+      "I have successfully completed my password generator application using ReactJS.",
     link: "https://passw0rdgenerat0r11.netlify.app/",
     github: "https://github.com/Aqib1239/PasswordGenerator",
     priority: false,
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["HTML", "CSS", "JavaScript", "ReactJS"],
   },
   {
-    image: "/work/news-app.png",
-    category: "Frontend",
-    name: "News Application",
-    description:
-      "I've developed a responsive News Application using HTML, CSS, JavaScript, and ReactJS. This platform delivers real-time news updates efficiently. Its responsiveness ensures seamless user experience across devices.",
-    link: "",
-    github: "",
-    priority: false,
-    techStack: ["HTML", "CSS", "JavaScript", "ReactJS", "API"],
-  },
-  {
+    id: 5,
     image: "/work/weather-app.png",
     category: "Frontend",
     name: "Weather Application",
     description:
-      "I developed a responsive weather app using ReactJS and OpenWeatherMap API. The app allows users with two tabs: one for current weather using Geolocation API and another for searching weather by city. It uses the OpenWeatherMap API to display real-time weather details like temperature, humidity, wind speed, and cloudiness. The app is user-friendly and works seamlessly across different devices.",
+      "I developed a responsive weather app using ReactJS and OpenWeatherMap API.",
     link: "https://weatherapp7777.netlify.app/",
     github: "https://github.com/Aqib1239/weatherApp",
     priority: false,
     techStack: ["HTML", "CSS", "JavaScript", "ReactJS", "API"],
   },
   {
+    id: 6,
     image: "/work/tic-tac.png",
     category: "Frontend",
     name: "Tic-tac-toe Game",
     description:
-      "I've built a responsive Tic-tac-toe game using HTML, CSS, and JavaScript. Players can enjoy the classic game on any device, thanks to its responsive design. The project showcases my skills in front-end development, offering a user-friendly experience with intuitive gameplay mechanics.",
+      "I've built a responsive Tic-tac-toe game using HTML, CSS, and JavaScript.",
     link: "https://tictactoeeplay.netlify.app/",
     github: "https://github.com/Aqib1239/TicTacToe_game",
     priority: false,
     techStack: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    image: "",
-    category: "Full Stack ",
-    name: "Full Stack Project Not Found",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum consectetur obcaecati! Asperiores, id odit.",
-    link: "",
-    github: "",
   },
 ];
 
@@ -124,7 +138,7 @@ const Page = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none">
+            <TabsList className="w-full grid h-full md:grid-cols-3 lg:max-w-[500px] mb-12 mx-auto md:border dark:border-none">
               {categories.map((cat, index) => (
                 <TabsTrigger
                   onClick={() => setCategory(cat)}
