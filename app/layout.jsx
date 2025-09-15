@@ -9,8 +9,9 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 // ✅ Added Google Search Console meta tag
 export const metadata = {
-  title: "Your Website Title",
-  description: "Your website description",
+  title: "Mohammad Aqib | MERN Stack & Frontend Developer (React.js, Next.js)",
+  description:
+    "I’m Mohammad Aqib, a passionate MERN Stack Developer with 1.5 years of experience in building scalable, responsive, and user-focused web applications. Skilled in React.js, Next.js, Node.js, Express, and MongoDB, I specialize in creating modern interfaces, real-time features, and seamless API integrations. Based in India, I’m always eager to learn and deliver impactful solutions.",
   verification: {
     google: "DZ9vWb6RWzvWdRvH1ig8OJhJhohqqzelEJIypdQAL-E",
   },
