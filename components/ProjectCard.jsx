@@ -69,7 +69,9 @@ const ProjectCard = ({ project }) => {
             )}
 
             {/* Action buttons */}
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div
+              className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
+            >
               {project.link && (
                 <motion.div
                   variants={buttonVariants}
