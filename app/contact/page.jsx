@@ -69,7 +69,7 @@ const Page = () => {
             </motion.div>
 
             {/* address */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.70 }}
@@ -80,13 +80,13 @@ const Page = () => {
                 32-Mahmand Garhi, Near Hindustan Building Material,
                 Shahjahanpur, Uttar Pradesh Pin Code - 242001
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* phone */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.85 }}
+              transition={{ duration: 1, delay: 0.65 }}
               className="flex items-center gap-x-8"
             >
               <PhoneCall size={20} className="text-primary" />
@@ -97,7 +97,7 @@ const Page = () => {
           <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0.70 }}
           >
             {/* form */}
             <Form />

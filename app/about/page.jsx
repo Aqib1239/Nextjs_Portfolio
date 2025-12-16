@@ -242,7 +242,7 @@ const Page = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.2 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="subtitle max-w-xl mx-auto xl:mx-0 tracking-wider "
+                      className="subtitle max-w-xl mx-auto xl:mx-0 tracking-wider text-justify"
                     >
                       Hello, I'm Mohammad Aqib, a dedicated MERN Stack Developer
                       with 1 year of professional experience in building
@@ -254,27 +254,30 @@ const Page = () => {
                       focus on frontend development and seamless user
                       experiences.{" "}
                       {!showMore ? (
-                        <span
-                          onClick={handleReadMore}
-                          className="text-primary cursor-pointer underline hover:opacity-80 transition"
-                        >
-                          Read More
-                        </span>
+                        <>
+                          <span
+                            onClick={handleReadMore}
+                            className="pl-1 text-primary cursor-pointer hover:opacity-80 transition"
+                          >
+                            Read More
+                          </span>
+                          <div className="w-[19%] xl:flex sm:hidden h-[0.8px] bg-primary"></div>
+                        </>
                       ) : (
                         <motion.span
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.6 }}
-                          className="block mt-2"
+                          className="block mt-2 text-justify"
                         >
                           I bring a problem-solving mindset, adaptability, and
                           continuous learning attitude to every project. My goal
                           is to craft impactful digital products while growing
                           as a professional in the world of full-stack web
-                          development.{" "}
+                          development.
                           <span
                             onClick={handleShowLess}
-                            className="text-primary cursor-pointer underline hover:opacity-80 transition"
+                            className="w-[19%] text-primary cursor-pointer border-b border-primary hover:opacity-80 transition"
                           >
                             Show Less
                           </span>

@@ -67,7 +67,7 @@ const Hero = () => {
               Web Developer
             </motion.div>
             <motion.h1
-              variants={animContainer(0.5)}
+              variants={animContainer(0.25)}
               initial="hidden"
               whileInView={"visible"}
               className="h1 tracking-wider"
@@ -75,7 +75,7 @@ const Hero = () => {
               Hello, I am Mohammad Aqib
             </motion.h1>
             <motion.p
-              variants={animContainer(1)}
+              variants={animContainer(0.5)}
               initial="hidden"
               whileInView={"visible"}
               id="typewriter"
@@ -84,7 +84,7 @@ const Hero = () => {
             ></motion.p>
 
             <motion.div
-              variants={animContainer(1.5)}
+              variants={animContainer(0.75)}
               initial="hidden"
               whileInView={"visible"}
               className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12"
@@ -95,7 +95,7 @@ const Hero = () => {
                   <motion.span
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1.5 }}
+                    transition={{ duration: 1, delay: 0.75 }}
                   >
                     <Send size={18} />
                   </motion.span>
@@ -108,7 +108,7 @@ const Hero = () => {
                   <motion.span
                     initial={{ opacity: 0, y: -100 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1.5 }}
+                    transition={{ duration: 1, delay: 0.75 }}
                   >
                     <Download size={18} />
                   </motion.span>
@@ -132,7 +132,7 @@ const Hero = () => {
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.5 }}
+              transition={{ duration: 1, delay: 0.75 }}
               className="w-full max-w-[500px] h-auto max-h-[500px] bg-no-repeat"
               ref={container}
             ></motion.div>
