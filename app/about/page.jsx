@@ -7,7 +7,6 @@ import Image from "next/image";
 import {
   Tabs,
   TabsList,
-  TabsPanel,
   TabsContent,
   TabsTrigger,
 } from "@/components/ui/tabs";
@@ -15,7 +14,6 @@ import {
 import { FaRegUserCircle } from "react-icons/fa";
 import { Briefcase, LucideHome, LucidePhoneCall } from "lucide-react";
 import { MdOutlineEmail } from "react-icons/md";
-import { SlCalender } from "react-icons/sl";
 import { FaGraduationCap, FaHtml5 } from "react-icons/fa6";
 import {
   Tooltip,

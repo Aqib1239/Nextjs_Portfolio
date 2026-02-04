@@ -4,14 +4,11 @@ import React, { useEffect, useRef } from "react";
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Download, Send } from 'lucide-react';
-import { RiBriefcase4Fill, RiTeamFill, RiTodoFill, RiArrowDownLine } from 'react-icons/ri';
-import { Typed } from "react-typed";
+import { RiArrowDownLine } from 'react-icons/ri';
 import Typewriter from "typewriter-effect/dist/core";
-import DevImg from './DevImg';
-import Badge from './Badge';
 import Socials from './Socials';
 import lottie from "lottie-web";
-import { wrap, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const animContainer = (delay) => ({
   hidden: {x: -100, opacity: 0},

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
+import { MailIcon, PhoneCall } from "lucide-react";
 import Form from "@/components/Form";
 import { motion } from "framer-motion";
 

@@ -1,7 +1,6 @@
 "use client";
 import useScrollProgress from "@/hooks/useScrollProgress";
 import { motion } from "framer-motion";
-import { Children } from "react";
 
 const variants = {
   hidden: { opacity: 0 },
